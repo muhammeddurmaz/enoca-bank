@@ -1,39 +1,39 @@
 # enoca-bank
-A repository for the backend challenge
-Account API Kullanım Kılavuzu
-Bu kılavuz, Account API'sini kullanarak hesap işlemleri gerçekleştirmek için gereken adımları içermektedir.
 
-Hesap Oluşturma
+Account API Kullanım Kılavuzu
+Bu kılavuz, Account API'sini kullanarak hesap işlemleri gerçekleştirmek için adım adım rehber sunmaktadır.
+
+1. Hesap Oluşturma
 Endpoint: POST /account
 
-Bu endpoint ile yeni bir hesap oluşturabilirsiniz. Hesap bilgileri (bakiye, şehir, para birimi, müşteri kimliği) girilir ve yeni bir hesap oluşturulur.
+Yeni bir hesap oluşturmak için bu endpoint'i kullanın. Hesap bilgilerini göndererek hesabınızı oluşturabilirsiniz.
 
-Hesap Güncelleme
+2. Hesap Güncelleme
 Endpoint: PUT /account/{id}
 
-Bu endpoint ile mevcut bir hesabı güncelleyebilirsiniz. Hesap kimliği belirtilir ve güncellenecek hesap bilgileri (bakiye, şehir, para birimi, müşteri kimliği) girilerek hesap güncellenir.
+Varolan bir hesabı güncellemek için bu endpoint'i kullanın. Hesap kimliği ile belirtilen hesabın bilgilerini güncelleyebilirsiniz.
 
-Hesapları Müşteri Kimliğine Göre Getirme
+3. Hesapları Müşteri Kimliğine Göre Getirme
 Endpoint: GET /accounts/{id}
 
-Bu endpoint ile belirli bir müşteri kimliğine ait tüm hesapları listeleyebilirsiniz. Müşteri kimliği belirtilir ve o müşteriye ait hesaplar listelenir.
+Belirli bir müşteri kimliğine ait tüm hesapları listeleyebilirsiniz. Müşteri kimliği ile hesapları getirin.
 
-Tek Hesabı Kimliğe Göre Getirme
+4. Tek Hesabı Kimliğe Göre Getirme
 Endpoint: GET /account/{id}
 
-Bu endpoint ile belirli bir hesabı, hesap kimliği belirtilerek getirebilirsiniz. İstenilen hesap kimliği girilir ve o hesap bilgileri getirilir.
+Belirli bir hesabı, hesap kimliği ile getirebilirsiniz. Hesap kimliğini kullanarak tek bir hesap bilgisini alabilirsiniz.
 
-Hesap Silme
+5. Hesap Silme
 Endpoint: DELETE /account/{id}
 
-Bu endpoint ile belirli bir hesabı, hesap kimliği belirtilerek silebilirsiniz. İstenilen hesap kimliği girilir ve o hesap silinir.
+Belirli bir hesabı silmek için bu endpoint'i kullanın. Hesap kimliği ile hesabı silebilirsiniz.
 
-Para Çekme
+6. Para Çekme
 Endpoint: PUT /account/withdraw/{id}/{amount}
 
-Bu endpoint ile belirli bir hesaptan para çekebilirsiniz. Hesap kimliği ve çekilmek istenen miktar girilir, ilgili hesaptan belirtilen miktar çekilir.
+Hesaptan para çekmek için bu endpoint'i kullanın. Hesap kimliği ve çekilecek miktarı belirterek para çekebilirsiniz.
 
-Para Ekleme
+7. Para Ekleme
 Endpoint: PUT /account/add/{id}/{amount}
 
-Bu endpoint ile belirli bir hesaba para ekleyebilirsiniz. Hesap kimliği ve eklemek istenen miktar girilir, ilgili hesaba belirtilen miktar eklenir.
+Hesaba para eklemek için bu endpoint'i kullanın. Hesap kimliği ve eklenecek miktarı belirterek para ekleyebilirsiniz.
