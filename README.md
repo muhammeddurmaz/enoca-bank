@@ -20,7 +20,11 @@ Servis URL: http://localhost:8080/api
 
 ### Account İşlemleri
 - Hesap oluşturmak için POST /account endpoint'i kullanılır.
- Request : {
+- **HTTP Method**: POST
+- **Endpoint**: `/account`
+- **Request Gövdesi**:
+```json
+{
   "accountName": "enoca",
   "customerId": 2
 }
