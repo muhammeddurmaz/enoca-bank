@@ -20,9 +20,9 @@ Servis URL: http://localhost:8080/api
 
 ### Account İşlemleri
 - Hesap oluşturmak için POST /account endpoint'i kullanılır.
-- **HTTP Method**: POST
-- **Endpoint**: `/account`
-- **Request Gövdesi**:
+ - **HTTP Method**: POST
+ - **Endpoint**: `/account`
+ - **Request Gövdesi**:
 ```json
 {
   "accountName": "enoca",
@@ -30,9 +30,9 @@ Servis URL: http://localhost:8080/api
 }
 ```
 - Hesap güncellemek için PUT /account/{id} endpoint'i kullanılır.
-- **HTTP Method**: PUT
-- **Endpoint**: `/account{id}`
-- **Request Gövdesi**:
+ - **HTTP Method**: PUT
+ - **Endpoint**: `/account{id}`
+ - **Request Gövdesi**:
 ```json
  {
   "id": 1,
@@ -41,21 +41,21 @@ Servis URL: http://localhost:8080/api
 }
 ```
 - Bir müşterinin hesaplarını sorgulamak için GET /accounts/{id} endpoint'i kullanılır.
-- **HTTP Method**: GET
-- **Endpoint**: `/accounts/{id}`
+ - **HTTP Method**: GET
+ - **Endpoint**: `/accounts/{id}`
 
 - Bir hesabın detaylarını sorgulamak için GET /account/{id} endpoint'i kullanılır.
-- **HTTP Method**: GET
-- **Endpoint**: `/account/{id}`
+ - **HTTP Method**: GET
+ - **Endpoint**: `/account/{id}`
 
 - Hesap silmek için DELETE /account/{id} endpoint'i kullanılır.
-- **HTTP Method**: DELETE
-- **Endpoint**: `/accounts/{id}`
+ - **HTTP Method**: DELETE
+ - **Endpoint**: `/accounts/{id}`
 
 - Hesaptan para çekmek için PUT /account/withdraw endpoint'i kullanılır.
-- **HTTP Method**: PUT
-- **Endpoint**: `/account/withdraw`
-- **Request Gövdesi**:
+ - **HTTP Method**: PUT
+ - **Endpoint**: `/account/withdraw`
+ - **Request Gövdesi**:
 ```json
 {
   "accountId": "2",
@@ -63,9 +63,9 @@ Servis URL: http://localhost:8080/api
 }
 ```
 - Hesaba para eklemek için PUT /account/add-money endpoint'i kullanılır.
-- **HTTP Method**: PUT
-- **Endpoint**: `/account/add-money`
-- **Request Gövdesi**:
+ - **HTTP Method**: PUT
+ - **Endpoint**: `/account/add-money`
+ - **Request Gövdesi**:
 ```json
  {
   "accountId": "2",
@@ -74,18 +74,18 @@ Servis URL: http://localhost:8080/api
 ```
 ### Müşteri İşlemleri
 - Müşteri oluşturmak için POST /customer endpoint'i kullanılır.
-- **HTTP Method**: POST
-- **Endpoint**: `/customer`
-- **Request Gövdesi**:
+ - **HTTP Method**: POST
+ - **Endpoint**: `/customer`
+ - **Request Gövdesi**:
 ```json
 {
   "name": "enoca"
 }
 ```  
 - Müşteri güncellemek için PUT /customer/{id} endpoint'i kullanılır.
-- **HTTP Method**: PUT
-- **Endpoint**: `/customer/{id}`
-- **Request Gövdesi**:
+ - **HTTP Method**: PUT
+ - **Endpoint**: `/customer/{id}`
+ - **Request Gövdesi**:
 ```json
 {
   "id": 2,
@@ -93,11 +93,11 @@ Servis URL: http://localhost:8080/api
 }
 ```
 - Tüm müşterileri sorgulamak için GET /customers endpoint'i kullanılır.
-- **HTTP Method**: GET
-- **Endpoint**: `/customers`
+ - **HTTP Method**: GET
+ - **Endpoint**: `/customers`
 - Bir müşterinin detaylarını sorgulamak için GET /customer/{id} endpoint'i kullanılır.
-- **HTTP Method**: GET
-- **Endpoint**: `/customer/{id}`
+ - **HTTP Method**: GET
+ - **Endpoint**: `/customer/{id}`
 - Müşteri silmek için DELETE /customer/{id} endpoint'i kullanılır.
-- **HTTP Method**: DELETE
-- **Endpoint**: `/customer/{id}`
+ - **HTTP Method**: DELETE
+ - **Endpoint**: `/customer/{id}`
