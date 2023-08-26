@@ -37,16 +37,20 @@ Servis URL: http://localhost:8080/api
   "id": 1,
   "accountName": "enoca",
   "customerId": 2
-}  
+}
+
 - Bir müşterinin hesaplarını sorgulamak için GET /accounts/{id} endpoint'i kullanılır.
 - **HTTP Method**: GET
 - **Endpoint**: `/accounts/{id}`
+
 - Bir hesabın detaylarını sorgulamak için GET /account/{id} endpoint'i kullanılır.
 - **HTTP Method**: GET
 - **Endpoint**: `/account/{id}`
+
 - Hesap silmek için DELETE /account/{id} endpoint'i kullanılır.
 - **HTTP Method**: DELETE
 - **Endpoint**: `/accounts/{id}`
+
 - Hesaptan para çekmek için PUT /account/withdraw endpoint'i kullanılır.
 - **HTTP Method**: PUT
 - **Endpoint**: `/account/withdraw`
@@ -55,7 +59,8 @@ Servis URL: http://localhost:8080/api
 {
   "accountId": "2",
   "amount": 234
-} 
+}
+
 - Hesaba para eklemek için PUT /account/add-money endpoint'i kullanılır.
 - **HTTP Method**: PUT
 - **Endpoint**: `/account/add-money`
