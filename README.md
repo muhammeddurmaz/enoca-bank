@@ -9,6 +9,9 @@
 - Diğer bağımlıklıklarla birlikte bir container oluşturmak için
      - cd integration
      - docker-compose up
+## Uygulamayı mvn ile ayağa kaldırmak için
+- Projenin ana dizininde terminali açınız.
+- Terminalde mvn spring-boot:run komutunu çalıştırarak projeyi başlatınız.
 
 Account API Kullanım Kılavuzu
 Bu kılavuz, Account API'sini kullanarak hesap işlemleri gerçekleştirmek için adım adım rehber sunmaktadır.
