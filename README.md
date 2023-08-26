@@ -1,5 +1,15 @@
 # enoca-bank
 
+Uygulamayı Docker ile Ayağa Kaldırmak için;
+- Uygulamanın bulunduğu dizine gel
+- projenin jar dosyasını oluştur bunun için aşağıdaki komutu çalıştır
+     # mvn clean install
+- Projede bulunan Dockerfile dosyası ile uygulamayı docker image haline getir.
+     # docker build -t enoca-bank:0.1 .
+- Diğer bağımlıklıklarla birlikte bir container oluşturmak için
+     # cd integration
+     # docker-compose up
+
 Account API Kullanım Kılavuzu
 Bu kılavuz, Account API'sini kullanarak hesap işlemleri gerçekleştirmek için adım adım rehber sunmaktadır.
 
