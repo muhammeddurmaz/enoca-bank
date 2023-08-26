@@ -13,40 +13,47 @@
 - Projenin ana dizininde terminali açınız.
 - Terminalde mvn spring-boot:run komutunu çalıştırarak projeyi başlatınız.
 
-Account API Kullanım Kılavuzu
-Bu kılavuz, Account API'sini kullanarak hesap işlemleri gerçekleştirmek için adım adım rehber sunmaktadır.
+## EnocaBank API Dökümantasyonu
 
-1. Hesap Oluşturma
-Endpoint: POST /api/account
+Sunucu Bilgileri
+Servis URL: http://localhost:8080/api
 
-Yeni bir hesap oluşturmak için bu endpoint'i kullanın. Hesap bilgilerini göndererek hesabınızı oluşturabilirsiniz.
+### Account İşlemleri
+- Hesap oluşturmak için POST /account endpoint'i kullanılır.
+ Request : {
+  "accountName": "enoca",
+  "customerId": 2
+}
+- Hesap güncellemek için PUT /account/{id} endpoint'i kullanılır.
+ Request : {
+  "id": 1,
+  "accountName": "enoca",
+  "customerId": 2
+}  
+- Bir müşterinin hesaplarını sorgulamak için GET /accounts/{id} endpoint'i kullanılır.
+- Bir hesabın detaylarını sorgulamak için GET /account/{id} endpoint'i kullanılır.
+- Hesap silmek için DELETE /account/{id} endpoint'i kullanılır.
+- Hesaptan para çekmek için PUT /account/withdraw endpoint'i kullanılır.
+ Request : {
+  "accountId": "2",
+  "amount": 234
+} 
+- Hesaba para eklemek için PUT /account/add-money endpoint'i kullanılır.
+ Request : {
+  "accountId": "2",
+  "amount": 234
+} 
 
-2. Hesap Güncelleme
-Endpoint: PUT /api/account/{id}
-
-Varolan bir hesabı güncellemek için bu endpoint'i kullanın. Hesap kimliği ile belirtilen hesabın bilgilerini güncelleyebilirsiniz.
-
-3. Hesapları Müşteri Kimliğine Göre Getirme
-Endpoint: GET /api/accounts/{id}
-
-Belirli bir müşteri kimliğine ait tüm hesapları listeleyebilirsiniz. Müşteri kimliği ile hesapları getirin.
-
-4. Tek Hesabı Kimliğe Göre Getirme
-Endpoint: GET /api/account/{id}
-
-Belirli bir hesabı, hesap kimliği ile getirebilirsiniz. Hesap kimliğini kullanarak tek bir hesap bilgisini alabilirsiniz.
-
-5. Hesap Silme
-Endpoint: DELETE /api/account/{id}
-
-Belirli bir hesabı silmek için bu endpoint'i kullanın. Hesap kimliği ile hesabı silebilirsiniz.
-
-6. Para Çekme
-Endpoint: PUT /api/account/withdraw/{id}/{amount}
-
-Hesaptan para çekmek için bu endpoint'i kullanın. Hesap kimliği ve çekilecek miktarı belirterek para çekebilirsiniz.
-
-7. Para Ekleme
-Endpoint: PUT /account/add/{id}/{amount}
-
-Hesaba para eklemek için bu endpoint'i kullanın. Hesap kimliği ve eklenecek miktarı belirterek para ekleyebilirsiniz.
+### Müşteri İşlemleri
+- Müşteri oluşturmak için POST /customer endpoint'i kullanılır.
+Request : {
+  "name": "enoca"
+}    
+- Müşteri güncellemek için PUT /customer/{id} endpoint'i kullanılır.
+ Request : {
+  "id": 2,
+  "name": "updatedname"
+} 
+- Tüm müşterileri sorgulamak için GET /customers endpoint'i kullanılır.
+- Bir müşterinin detaylarını sorgulamak için GET /customer/{id} endpoint'i kullanılır.
+- Müşteri silmek için DELETE /customer/{id} endpoint'i kullanılır.
