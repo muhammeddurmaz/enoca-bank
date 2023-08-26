@@ -1,0 +1,32 @@
+version: '3.8'
+
+
+services:
+  enocabank:
+    image: enoca-bank:0.1
+    ports:
+      - 8080:8080
+    environment:
+      - DB_URL=jdbc:postgresql://enocabank-postgresql:5432/enoca-bank
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=1234
+      - REDIS_HOST=enocabank-redis
+      - REDIS_PORT=6379
+
+  enocabank-postgresql:
+    image: postgres:14.2
+#    volumes:
+#      - pgdataa:/var/lib/postgresql/data/
+    hostname: enocabank-postgresql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5434:5432
+  enocabank-redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+#volumes:
+#  pgdataa:
