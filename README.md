@@ -28,6 +28,7 @@ Servis URL: http://localhost:8080/api
   "accountName": "enoca",
   "customerId": 2
 }
+```
 - Hesap güncellemek için PUT /account/{id} endpoint'i kullanılır.
 - **HTTP Method**: PUT
 - **Endpoint**: `/account{id}`
@@ -38,7 +39,7 @@ Servis URL: http://localhost:8080/api
   "accountName": "enoca",
   "customerId": 2
 }
-
+```
 - Bir müşterinin hesaplarını sorgulamak için GET /accounts/{id} endpoint'i kullanılır.
 - **HTTP Method**: GET
 - **Endpoint**: `/accounts/{id}`
@@ -60,7 +61,7 @@ Servis URL: http://localhost:8080/api
   "accountId": "2",
   "amount": 234
 }
-
+```
 - Hesaba para eklemek için PUT /account/add-money endpoint'i kullanılır.
 - **HTTP Method**: PUT
 - **Endpoint**: `/account/add-money`
@@ -70,7 +71,7 @@ Servis URL: http://localhost:8080/api
   "accountId": "2",
   "amount": 234
 } 
-
+```
 ### Müşteri İşlemleri
 - Müşteri oluşturmak için POST /customer endpoint'i kullanılır.
 - **HTTP Method**: POST
@@ -79,7 +80,8 @@ Servis URL: http://localhost:8080/api
 ```json
 {
   "name": "enoca"
-}    
+}
+```  
 - Müşteri güncellemek için PUT /customer/{id} endpoint'i kullanılır.
 - **HTTP Method**: PUT
 - **Endpoint**: `/customer/{id}`
@@ -88,7 +90,8 @@ Servis URL: http://localhost:8080/api
 {
   "id": 2,
   "name": "updatedname"
-} 
+}
+```
 - Tüm müşterileri sorgulamak için GET /customers endpoint'i kullanılır.
 - **HTTP Method**: GET
 - **Endpoint**: `/customers`
