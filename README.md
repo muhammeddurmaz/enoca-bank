@@ -20,9 +20,9 @@ Servis URL: http://localhost:8080/api
 
 ### Account İşlemleri
 - Hesap oluşturmak için POST /account endpoint'i kullanılır.
- **HTTP Method**: POST
- **Endpoint**: `/account`
- **Request Gövdesi**:
+- **HTTP Method**: POST
+- **Endpoint**: `/account`
+- **Request Gövdesi**:
 ```json
 {
   "accountName": "enoca",
@@ -30,9 +30,9 @@ Servis URL: http://localhost:8080/api
 }
 ```
 - Hesap güncellemek için PUT /account/{id} endpoint'i kullanılır.
- **HTTP Method**: PUT
- **Endpoint**: `/account{id}`
- **Request Gövdesi**:
+- **HTTP Method**: PUT
+- **Endpoint**: `/account{id}`
+- **Request Gövdesi**:
 ```json
  {
   "id": 1,
