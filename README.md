@@ -7,11 +7,11 @@
 - Projede bulunan Dockerfile dosyası ile uygulamayı docker image haline getir.
      - docker build -t enoca-bank:0.1 .
 - Diğer bağımlıklıklarla birlikte bir container oluşturmak için
-     - cd integration
-     - docker-compose up
+     - **cd integration**
+     - **docker-compose up**
 ## Uygulamayı mvn ile ayağa kaldırmak için
 - Projenin ana dizininde terminali açınız.
-- Terminalde mvn spring-boot:run komutunu çalıştırarak projeyi başlatınız.
+- Terminalde **mvn spring-boot:run** komutunu çalıştırarak projeyi başlatınız.
 
 ## EnocaBank API Dökümantasyonu
 
